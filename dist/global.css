@@ -1,0 +1,120 @@
+body{
+  overflow:hidden;
+  font-family:"Tahoma","San-Serif" , "Microsoft Yahei UI Light";
+  margin: 0px;
+  width:100%;
+  height:100%;
+  background:black;
+  color:silver;
+}
+:root{
+  --textsize : 2em;
+  --depthcolor0 : silver;
+  --depthcolor1 : hsl(40,70%,50%);
+  --depthcolor2 : hsl(80,70%,50%);
+  --depthcolor3 : hsl(130,70%,50%);
+  --depthcolor4  : hsl(170,70%,50%);
+  --depthcolor5  : hsl(210,70%,50%);
+  --depthcolor6 : hsl(250,70%,60%);
+  --depthcolor7  : hsl(290,70%,50%);
+  --depthcolor8  : hsl(330,70%,50%);
+  --depthcolor9  : hsl(360,70%,50%); 
+  --selected : rgb(96, 96, 96);
+  --selected-color : hsl(40,70%,50%);
+  --highlightline : rgba(30,30,30);
+  --track-bg:gray;
+  --hyperlink: greenyellow;
+  --hit : rgb(255, 173, 42);
+}
+@media (orientation: portrait) {
+  body {
+    font-size:12px;
+  }
+  button {font-size:1em}
+}
+
+@media (orientation: landscape) {
+  body {
+    font-size:12px;
+  }
+}
+.bodytext {font-size:var(--textsize)}
+.bodytextarea  {overflow-y:auto;height:100%}
+
+.app{
+  width:100%;
+  height:100%;
+}
+
+.tabs {--webkit-user-select: none;overflow:hidden  ; font-size:var(--textsize);
+  user-select: none;padding-left: 0.05em; background:var(--menubar-color);}
+  .tab-content {
+    display: none;
+    pointer-events: none;
+    /* overflow-y:auto; */
+  }
+  
+.selected {background: var(--selected);border-radius: 0.25em}
+.rootptk {font-weight: bold; }  
+.visible {display:inline;pointer-events:all;}
+.clickable {cursor:pointer;}
+
+
+.slidercaption {color:black;pointer-events: none;user-select: none;}
+.parlabel {font-size:115%;padding-left:3px}
+.partext{border-left:3px solid black;}
+.parselected {border-left:3px solid gray}
+.partext0 {color:var(--depthcolor0)}
+.partext1 {color:var(--depthcolor1)}
+.partext2 {color:var(--depthcolor2)}
+.partext3 {color:var(--depthcolor3)}
+.partext4 {color:var(--depthcolor4)}
+.partext5 {color:var(--depthcolor5)}
+.partext6 {color:var(--depthcolor6)}
+.partext7 {color:var(--depthcolor7)}
+.partext8 {color:var(--depthcolor8)}
+.partext9 {color:var(--depthcolor9)}
+
+
+.hr {background-color:gray;height: 1px;}
+.centernav {width:100%;text-align: center;display:block}
+
+.statebutton{ user-select: none; cursor:pointer;fill:var(--button-selected);padding-right:0.2em}
+.statebutton.disabled {cursor:auto;fill:none;stroke:var(--button-unselected) }
+.statebutton.unselected {color:gray}
+.statebutton.disabled:hover {fill:none; stroke: var(--button-unselected)}
+@font-face {
+	font-family:"ProvidentPali";
+	src: local("ProvidentPali"), url("ProvidentPaliSegoe.otf") 
+}
+.lang-pp- {font-family: "ProvidentPali" ;}
+.lang-pp-iast {font-family: "Segoe UI",Tahoma}
+.lang-pp-tb {font-size:120%}
+.lang-en {font-family: "Times New Roman", Georgia;}
+.logo {color:goldenrod;font-size:125%}
+a {color:var(--hyperlink)}
+.hyperlink {color:var(--hyperlink)}
+
+@keyframes favorblinker {
+  50% { opacity: 0;  }
+}
+
+.needupdate{
+  animation: favorblinker 2s linear infinite;
+}
+
+.diminput {color:silver}
+.selectedsearchable {background: var(--hit);color:white;cursor: pointer;user-select: none;}
+.tofind {font-size:1em}
+.hide{display:none}
+.userselectnone{user-select:none}
+
+.hl0{color:var(--hit)}
+.hl1{color:rgb(255, 86, 86)}
+.hl2{color:rgb(238, 105, 255)}
+.hl2{color:rgb(90, 181, 255)}
+.excerptseq {padding-left:0.3em;padding-right:0.3em;font-size:90%;color:gray}
+.hitbtn{color:var(--hit);font-size:90%;}
+.abridged {font-size:85%;color:gray}
+.offtag_f {font-size:85%}
+.footnote {font-size:90%;color:aqua}
