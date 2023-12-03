@@ -102,7 +102,7 @@
                 return cache.match(event.request.url);
               }).then(async function(res) {
                 if (!res) {
-                    const res_1 = await fetch(r); //delegate to real fetch
+                    const res_1 = await fetch(req); //delegate to real fetch
                     return await res_1.arrayBuffer();
                 }
                 return res.arrayBuffer();
